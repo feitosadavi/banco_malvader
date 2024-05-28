@@ -1,6 +1,7 @@
 {
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
-    "menus.h": "c"
+    "menus.h": "c",
+    "stdio.h": "c"
   }
 }

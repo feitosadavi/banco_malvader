@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menus.h"
+#include "../conta/conta.h"
 
 void abrir_menu_funcionario()
 {
@@ -14,7 +15,7 @@ void abrir_menu_funcionario()
   switch (opcao)
   {
   case 1:
-    // abrir_conta();
+    abrir_conta();
     break;
 
   case 2:
