@@ -6,5 +6,6 @@ void abrir_conta_corrente();
 void abrir_conta_poupanca();
 void encerrar_conta();
 void consultar_dados(int tipo);
+void alterar_dados(int tipo);
 
 #endif

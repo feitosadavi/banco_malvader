@@ -3,6 +3,7 @@
   "files.associations": {
     "menus.h": "c",
     "stdio.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "conta.h": "c"
   }
 }

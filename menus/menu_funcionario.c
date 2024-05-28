@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "menus.h"
 #include "../conta/conta.h"
+#include "../funcionario/funcionario.h"
 
 void abrir_menu_funcionario()
 {
@@ -27,11 +28,11 @@ void abrir_menu_funcionario()
     break;
 
   case 4:
-    // alterar_dados();
+    abrir_menu_alterar_dados();
     break;
 
   case 5:
-    // cadastro_de_funcionarios();
+    cadastrar_funcionario();
     break;
 
   case 6:
