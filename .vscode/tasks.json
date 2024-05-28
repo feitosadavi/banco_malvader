@@ -13,6 +13,7 @@
         // "menus/menu_funcionario.c",
         "autenticacao/autorizar.c",
         "conta/abrir_conta.c",
+        "conta/abrir_conta_corrente.c",
         "-o",
         "${fileDirname}/../out"
       ],

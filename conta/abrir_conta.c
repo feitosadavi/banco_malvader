@@ -14,7 +14,7 @@ void abrir_conta()
   switch (opcao)
   {
   case 1:
-    // abrir_conta_corrente();
+    abrir_conta_corrente();
     break;
 
   case 2:
