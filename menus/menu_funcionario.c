@@ -23,7 +23,7 @@ void abrir_menu_funcionario()
     break;
 
   case 3:
-    // consultar_dados();
+    abrir_menu_consultar_dados();
     break;
 
   case 4:
