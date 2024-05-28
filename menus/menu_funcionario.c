@@ -19,7 +19,7 @@ void abrir_menu_funcionario()
     break;
 
   case 2:
-    // encerrar_conta();
+    encerrar_conta();
     break;
 
   case 3:

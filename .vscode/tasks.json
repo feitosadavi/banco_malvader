@@ -15,6 +15,7 @@
         "conta/abrir_conta.c",
         "conta/abrir_conta_corrente.c",
         "conta/abrir_conta_poupanca.c",
+        "conta/encerrar_conta.c",
         "-o",
         "${fileDirname}/../out"
       ],
