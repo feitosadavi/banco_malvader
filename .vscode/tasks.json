@@ -20,6 +20,7 @@
         "conta/consultar_dados.c",
         "conta/alterar_dados.c",
         "funcionario/cadastrar_funcionario.c",
+        "relatorio_geral.c",
         "-o",
         "${fileDirname}/../out"
       ],

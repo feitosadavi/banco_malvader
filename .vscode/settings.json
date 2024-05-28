@@ -4,6 +4,7 @@
     "menus.h": "c",
     "stdio.h": "c",
     "stdlib.h": "c",
-    "conta.h": "c"
+    "conta.h": "c",
+    "funcionario.h": "c"
   }
 }

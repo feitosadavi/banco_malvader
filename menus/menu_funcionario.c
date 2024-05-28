@@ -3,6 +3,7 @@
 #include "menus.h"
 #include "../conta/conta.h"
 #include "../funcionario/funcionario.h"
+#include "../relatorio_geral.h"
 
 void abrir_menu_funcionario()
 {
@@ -36,7 +37,7 @@ void abrir_menu_funcionario()
     break;
 
   case 6:
-    // gerar_relatorios();
+    gerar_relatorio_geral();
     break;
 
   case 7:
