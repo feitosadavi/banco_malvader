@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "menus.h"
 
 void abrir_menu_funcionario()
