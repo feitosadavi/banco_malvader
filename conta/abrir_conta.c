@@ -18,7 +18,7 @@ void abrir_conta()
     break;
 
   case 2:
-    // abrir_conta_poupanca();
+    abrir_conta_poupanca();
     break;
 
   case 3:

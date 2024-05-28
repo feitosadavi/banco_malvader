@@ -14,6 +14,7 @@
         "autenticacao/autorizar.c",
         "conta/abrir_conta.c",
         "conta/abrir_conta_corrente.c",
+        "conta/abrir_conta_poupanca.c",
         "-o",
         "${fileDirname}/../out"
       ],

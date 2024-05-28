@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "../menus/menu_funcionario.c"
+#include <stdlib.h>
 
 void abrir_conta_poupanca()
 {
+  system("clear");
   printf("Abrir conta poupança: não implementado");
-  abrir_menu_funcionario();
-  return 0;
+  // abrir_menu_funcionario();
 }
