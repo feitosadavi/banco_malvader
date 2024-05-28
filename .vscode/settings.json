@@ -5,6 +5,7 @@
     "stdio.h": "c",
     "stdlib.h": "c",
     "conta.h": "c",
-    "funcionario.h": "c"
+    "funcionario.h": "c",
+    "relatorio_geral.h": "c"
   }
 }

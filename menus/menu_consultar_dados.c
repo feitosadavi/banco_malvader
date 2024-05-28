@@ -8,8 +8,9 @@ void abrir_menu_consultar_dados()
   system("clear");
 
   int opcao = 0;
+  printf("\n -=-=-=-= Menu Consultar Dados -=-=-=-= \n \n");
 
-  printf(" 1 - Consultar Conta \n 2 - Consultar Funcionário \n 3 - Consultar Cliente \n 4 - Voltar\n");
+  printf("1 - Consultar Conta \n2 - Consultar Funcionário \n3 - Consultar Cliente \n4 - Voltar\n");
   scanf("%d", &opcao);
 
   switch (opcao)

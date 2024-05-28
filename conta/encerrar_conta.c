@@ -6,5 +6,5 @@ void encerrar_conta()
 {
   system("clear");
   printf("Encerrar conta: não implementado");
-  // abrir_menu_funcionario();
+  abrir_menu_funcionario();
 }

@@ -8,8 +8,9 @@ void abrir_menu_alterar_dados()
   system("clear");
 
   int opcao = 0;
+  printf("\n -=-=-=-= Menu Alterar Dados -=-=-=-= \n \n");
 
-  printf(" 1 - Alterar Conta \n 2 - Alterar Funcionário \n 3 - Alterar Cliente \n 4 - Voltar\n");
+  printf("1 - Alterar Conta \n2 - Alterar Funcionário \n3 - Alterar Cliente \n4 - Voltar\n");
   scanf("%d", &opcao);
 
   switch (opcao)

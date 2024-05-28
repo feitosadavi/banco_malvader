@@ -10,14 +10,15 @@ void abrir_menu_funcionario()
   system("clear");
 
   int opcao = 0;
+  printf("\n -=-=-=-= Menu Funcionário -=-=-=-= \n \n");
 
-  printf(" 1 - Abertura de Conta \n 2 - Encerramento de Conta \n 3 - Consultar Dados \n 4 - Alterar Dados \n 5 - Cadastro de Funcionários \n 6 - Gerar Relatórios \n 7 - Sair \n");
+  printf("1 - Abertura de Conta \n2 - Encerramento de Conta \n3 - Consultar Dados \n4 - Alterar Dados \n5 - Cadastro de Funcionários \n6 - Gerar Relatórios \n7 - Sair \n");
   scanf("%d", &opcao);
 
   switch (opcao)
   {
   case 1:
-    abrir_conta();
+    abrir_menu_abertura_conta();
     break;
 
   case 2:

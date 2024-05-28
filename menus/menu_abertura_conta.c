@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "conta.h"
-#include "../menus/menus.h"
+#include "menus.h"
+#include "../conta/conta.h"
 
-void abrir_conta()
+void abrir_menu_abertura_conta()
 {
   system("clear");
   int opcao = 0;
+  printf("\n -=-=-=-= Menu Abertura de Conta -=-=-=-= \n \n");
 
   printf(" 1 - Abertura de Conta \n 2 - Encerramento de Conta \n 3 - Sair \n");
   scanf("%d", &opcao);
@@ -22,7 +23,7 @@ void abrir_conta()
     break;
 
   case 3:
-    // menu_funcionario();
+    abrir_menu_funcionario();
     break;
   }
 }
