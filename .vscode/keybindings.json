@@ -1,0 +1,7 @@
+{
+    "key": "F9",
+    "command": "gcc",
+    "args": {
+      "text": "cls; rails server\u000D"
+    }
+}

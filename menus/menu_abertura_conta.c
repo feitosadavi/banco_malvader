@@ -23,7 +23,7 @@ void abrir_menu_abertura_conta()
     break;
 
   case 3:
-    abrir_menu_funcionario();
+    abrir_menu_funcionario("");
     break;
   }
 }

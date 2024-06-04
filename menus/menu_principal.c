@@ -3,43 +3,33 @@
 #include "menus.h"
 #include "../autenticacao/autenticacao.h"
 
-void abrir_menu_principal()
+void abrir_menu_principal(char *mensagem)
 {
   system("clear");
+  printf("%s", mensagem);
 
-  int opcao = 0;
-  printf("\n -=-=-=-= Menu Principal -=-=-=-= \n \n");
-
-  printf("1 - Menu Funcionário \n2 - Menu Cliente \n3 - Sair \n");
-  scanf("%d", &opcao);
-
-  if (opcao != 3)
-  {
-    char senha[10];
-    printf("Digite a senha de administrador: ");
-    scanf("%10s", senha);
-    if (autorizar(senha))
-    {
-      switch (opcao)
-      {
+  int opcao;
+    printf("\n -=-=-=-= Menu Principal -=-=-=-= \n \n");
+    printf("1 - Menu Funcionário \n2 - Menu Cliente \n3 - Sair\n");
+    scanf("%d", &opcao);
+    switch (opcao) {
       case 1:
-        abrir_menu_funcionario();
+        if (autorizar()) abrir_menu_funcionario();
+        else abrir_menu_principal("-> Senha inválida");
         break;
 
       case 2:
-        abrir_menu_cliente();
+        if (autorizar()) abrir_menu_cliente();
+        else abrir_menu_principal("-> Senha inválida");
         break;
 
-      default:
+      case 3:
         printf("Encerrando programa");
-        exit(0);
+        exit(1);
+
+      default:
+        abrir_menu_principal("-> Opção inválida");
+        printf("\nOpção inválida\n");
         break;
-      }
     }
-  }
-  else
-  {
-    printf("Encerrando programa");
-    exit(1);
-  }
 }

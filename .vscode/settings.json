@@ -6,6 +6,8 @@
     "stdlib.h": "c",
     "conta.h": "c",
     "funcionario.h": "c",
-    "relatorio_geral.h": "c"
+    "relatorio_geral.h": "c",
+    "autenticacao.h": "c",
+    "string.h": "c"
   }
 }
