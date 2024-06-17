@@ -71,37 +71,37 @@ int ler_campo_arquivo(const char *nome_arquivo, char *campo) {
 	return dado;
 }
 
-int gravar_com_referencia(const char *nome_arquivo, char *referencia,char *chave_valor) {
-  printf("Gravar com referencia");
-  // FILE *arquivo = abrir_arquivo(nome_arquivo, "r");
-  // FILE *arquivo_temp = abrir_arquivo("temp.txt", "w");
+// int gravar_com_referencia(const char *nome_arquivo, char *referencia,char *chave_valor) {
+//   printf("Gravar com referencia");
+//   // FILE *arquivo = abrir_arquivo(nome_arquivo, "r");
+//   // FILE *arquivo_temp = abrir_arquivo("temp.txt", "w");
 
-  // char linha[1000];
-  // int referencia_encontrada = 0;
-  // while (fgets(linha, sizeof(linha), arquivo) != NULL) {
-  //   fputs(linha, arquivo_temp);
-  //   if (strncmp(linha, referencia, strlen(referencia)) == 0) {
-  //     fprintf(arquivo_temp, "%s\n", chave_valor); 
-  //     referencia_encontrada = 1;
-  //   }
-  // }
+//   // char linha[1000];
+//   // int referencia_encontrada = 0;
+//   // while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+//   //   fputs(linha, arquivo_temp);
+//   //   if (strncmp(linha, referencia, strlen(referencia)) == 0) {
+//   //     fprintf(arquivo_temp, "%s\n", chave_valor); 
+//   //     referencia_encontrada = 1;
+//   //   }
+//   // }
 
-  // fclose(arquivo);
-  // fclose(arquivo_temp);
+//   // fclose(arquivo);
+//   // fclose(arquivo_temp);
 
-  // if (referencia_encontrada) {
-  //   if (remove(nome_arquivo) != 0) {
-  //     perror("Erro ao remover o arquivo original");
-  //     return 1;
-  //   }
-  //   if (rename("temp.txt", nome_arquivo) != 0) {
-  //     perror("Erro ao renomear o arquivo temporário");
-  //     return 1;
-  //   }
-  // } else {
-  //   remove("temp.txt");
-  //   return 1;
-  // }
+//   // if (referencia_encontrada) {
+//   //   if (remove(nome_arquivo) != 0) {
+//   //     perror("Erro ao remover o arquivo original");
+//   //     return 1;
+//   //   }
+//   //   if (rename("temp.txt", nome_arquivo) != 0) {
+//   //     perror("Erro ao renomear o arquivo temporário");
+//   //     return 1;
+//   //   }
+//   // } else {
+//   //   remove("temp.txt");
+//   //   return 1;
+//   // }
 
-  return 0;
-}
+//   return 0;
+// }

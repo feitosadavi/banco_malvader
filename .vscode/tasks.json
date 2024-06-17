@@ -14,6 +14,7 @@
         "menus/menu_consultar_dados.c",
         "menus/menu_alterar_dados.c",
         "menus/menu_abertura_conta.c",
+        // "gerenciador_de_arquivos.c",
         "autenticacao/autorizar.c",
         "conta/abrir_conta_corrente.c",
         "conta/abrir_conta_poupanca.c",

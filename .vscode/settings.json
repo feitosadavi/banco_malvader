@@ -8,6 +8,8 @@
     "funcionario.h": "c",
     "relatorio_geral.h": "c",
     "autenticacao.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "gerenciador_de_arquivos.h": "c",
+    "stdarg.h": "c"
   }
 }
