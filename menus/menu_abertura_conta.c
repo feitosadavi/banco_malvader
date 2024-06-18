@@ -9,7 +9,7 @@ void abrir_menu_abertura_conta()
   int opcao = 0;
   printf("\n -=-=-=-= Menu Abertura de Conta -=-=-=-= \n \n");
 
-  printf(" 1 - Conta Corrente \n 2 - Conta Poupança \n 3 - Sair \n");
+  printf(" 1 - Conta Corrente \n 2 - Conta Poupanca \n 3 - Sair \n");
   scanf("%d", &opcao);
 
   switch (opcao)

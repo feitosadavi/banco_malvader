@@ -9,8 +9,8 @@ void abrir_conta_corrente(char *mensagem) {
   char *tokens[14] = { NULL };
   char *valores[14] = { "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
   char *comandos[14] = {
-    "Insira o número da agência: ",
-    "Insira o número da conta: ",
+    "Insira o numero da agência: ",
+    "Insira o numero da conta: ",
     "Insira o nome do cliente: ",
     "Insira o CPF do cliente: ",
     "Insira a data de nascimento: ",
@@ -18,7 +18,7 @@ void abrir_conta_corrente(char *mensagem) {
     "Insira o endereço do cliente: ",
     "Insira o CEP: ",
     "Insira o local: ",
-    "Insira o número da casa: ",
+    "Insira o numero da casa: ",
     "Insira o bairro: ",
     "Insira a cidade: ",
     "Insira o estado: ",
@@ -45,16 +45,16 @@ void abrir_conta_corrente(char *mensagem) {
       ler_dado_e_gerar_token(comandos[opcao - 1], chaves[opcao - 1], &tokens[opcao - 1]);
       extrair_valor_do_token(tokens[opcao - 1], &valores[opcao - 1]);
     } else if (opcao != 16) {
-      printf("Opção inválida!\n");
+      printf("Opcao invalida!\n");
     }
   } while (opcao != 16);
 
   Cleanup:
-  // Verificar se o número da conta foi fornecido
+  // Verificar se o numero da conta foi fornecido
   if (tokens[1] != NULL) {
     gravar_com_referencia("arquivos.txt", tokens[1], tokens, 14);
     abrir_menu_funcionario("Conta gravada com sucesso! \n");
   } else {
-    printf("Número da conta é obrigatório para finalizar o cadastro.\n");
+    printf("Numero da conta eh obrigatorio para finalizar o cadastro.\n");
   }
 }

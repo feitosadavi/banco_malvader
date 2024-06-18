@@ -47,7 +47,7 @@ int gravar_com_referencia(const char *nome_arquivo, char *referencia, char *iten
 void ler_dado_e_gerar_token(char *comando, char *chave_token, char **token) {
   char valor[256];
 
-  printf("%s: ", comando);
+  printf("%s", comando);
   if (fgets(valor, sizeof(valor), stdin) == NULL) {
     fprintf(stderr, "Erro ao ler o valor.\n");
     return;
