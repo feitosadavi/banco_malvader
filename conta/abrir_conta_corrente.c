@@ -49,7 +49,6 @@ void abrir_conta_corrente(char *mensagem) {
     }
   } while (opcao != 15);
 
-  Cleanup:
   // Verificar se o numero da conta foi fornecido
   if (tokens[1] != NULL) {
     gravar_com_referencia("arquivos.txt", tokens[1], tokens, 14);
