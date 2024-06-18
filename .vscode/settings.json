@@ -10,6 +10,7 @@
     "autenticacao.h": "c",
     "string.h": "c",
     "gerenciador_de_arquivos.h": "c",
-    "stdarg.h": "c"
+    "stdarg.h": "c",
+    "locale.h": "c"
   }
 }
