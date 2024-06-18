@@ -1,13 +1,16 @@
 #include "../gerenciador_de_arquivos.c"
+#include "../ferramentas.c"
+#include "../menus/menus.h"
 
 void abrir_conta_corrente(char *mensagem) {
-  system("clear");
+  // system("clear");
   printf("%s\n", mensagem);
-  int opcao = 0;
+  int opcao = 16;
+  char *agencia_token="", *n_conta_token="";
+  char *val_agencia = "", *val_n_conta = "";
   do {
-    char *agencia = NULL;    
-    // system("clear");
-    printf("\n 1 - Agência \n 16 - Finalizar\n");
+    system("clear");
+    printf("\n 1 - Agência [%s] \n 2 - Nº da conta [%s] \n 16 - Finalizar\n", val_agencia, val_n_conta);
     printf("Insira a opção desejada: ");
 
     char opcao_str[10];
@@ -16,14 +19,19 @@ void abrir_conta_corrente(char *mensagem) {
     }
     switch (opcao) {
       case 1:
-        ler_dado("agencia", "Insira o número da agência: ", &agencia);
+        ler_dado_e_gerar_token("Insira o número da agência: ", "agencia", &agencia_token);
+        extrair_valor_do_token(agencia_token, &val_agencia);
+        break;
+      case 2:
+        ler_dado_e_gerar_token("Insira o número da conta: ", "n_conta", &n_conta_token);
+        extrair_valor_do_token(n_conta_token, &val_n_conta);
         break;
       case 16:
         goto Cleanup;
         Cleanup: ;
-
-        char *chave_valor[] = { agencia };
-        gravar_com_referencia("arquivos.txt", format_string("Conta %d:", 1), chave_valor, 1);
+        char *tokens[] = { agencia_token };
+        gravar_com_referencia("arquivos.txt", n_conta_token, tokens, 1);
+        abrir_menu_funcionario("Conta gravada com sucesso! \n");
         break;
       default:
         printf("Opção inválida!\n");
