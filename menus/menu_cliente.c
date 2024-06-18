@@ -7,7 +7,7 @@
 
 void abrir_menu_cliente()
 {
-  system("clear");
+  system("cls");
   printf("\n -=-=-=-= Menu Cliente -=-=-=-= \n \n");
 
   int opcao = 0;

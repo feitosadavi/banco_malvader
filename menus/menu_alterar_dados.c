@@ -5,7 +5,7 @@
 
 void abrir_menu_alterar_dados()
 {
-  system("clear");
+  system("cls");
 
   int opcao = 0;
   printf("\n -=-=-=-= Menu Alterar Dados -=-=-=-= \n \n");

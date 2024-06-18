@@ -4,7 +4,7 @@
 
 void realizar_deposito()
 {
-  system("clear");
+  system("cls");
   printf("Realizar deposito: não implementado");
   abrir_menu_cliente();
 }

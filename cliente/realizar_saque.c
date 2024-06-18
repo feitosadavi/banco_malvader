@@ -4,7 +4,7 @@
 
 void realizar_saque()
 {
-  system("clear");
+  system("cls");
   printf("Realizar saque: não implementado");
   abrir_menu_cliente();
 }

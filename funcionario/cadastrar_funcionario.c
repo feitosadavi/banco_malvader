@@ -4,7 +4,7 @@
 
 void cadastrar_funcionario()
 {
-  system("clear");
+  system("cls");
   printf("Cadastrar funcionário: não implementado");
   abrir_menu_funcionario();
 }

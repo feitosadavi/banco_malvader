@@ -4,7 +4,7 @@
 
 void abrir_conta_poupanca()
 {
-  system("clear");
+  system("cls");
   printf("Abrir conta poupança: não implementado");
   abrir_menu_abertura_conta();
 }

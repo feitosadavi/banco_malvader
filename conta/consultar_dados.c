@@ -4,7 +4,7 @@
 
 void consultar_dados(int tipo)
 {
-  system("clear");
+  system("cls");
   printf("Consultar dados: não implementado");
   abrir_menu_consultar_dados();
 }

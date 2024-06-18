@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
-#include "conta/conta.h"
+#include "menus/menus.h"
 
 int main() {
-  abrir_conta_corrente("Bem-vindo ao sistema bancário!");
+  abrir_menu_principal("");
   return 0;
 }
 

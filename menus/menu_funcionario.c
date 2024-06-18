@@ -7,7 +7,7 @@
 
 void abrir_menu_funcionario(char *mensagem)
 {
-  system("clear");
+  system("cls");
   printf("%s", mensagem);
 
   int opcao;

@@ -4,7 +4,7 @@
 
 void consultar_saldo()
 {
-  system("clear");
+  system("cls");
   printf("Consultar saldo: não implementado");
   abrir_menu_cliente();
 }

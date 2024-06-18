@@ -4,7 +4,7 @@
 
 void gerar_relatorio_geral()
 {
-  system("clear");
+  system("cls");
   printf("gerar_relatorio_geral: não implementado");
   abrir_menu_funcionario();
 }

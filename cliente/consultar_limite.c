@@ -4,7 +4,7 @@
 
 void consultar_limite()
 {
-  system("clear");
+  system("cls");
   printf("Consultar limite: não implementado");
   abrir_menu_cliente();
 }

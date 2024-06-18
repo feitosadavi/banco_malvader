@@ -44,28 +44,6 @@ int gravar_com_referencia(const char *nome_arquivo, char *referencia, char *iten
   }
 }
 
-char* format_string(const char *format, ...) {
-  va_list args;
-  va_start(args, format);
-  int size = vsnprintf(NULL, 0, format, args);
-  va_end(args);
-
-  if (size < 0) {
-    return NULL;
-  }
-
-  char *formatted_string = (char *)malloc(size + 1);
-  if (formatted_string == NULL) {
-    return NULL;
-  }
-
-  va_start(args, format);
-  vsnprintf(formatted_string, size + 1, format, args);
-  va_end(args);
-
-  return formatted_string;
-}
-
 void ler_dado_e_gerar_token(char *comando, char *chave_token, char **token) {
   char valor[256];
 
@@ -152,4 +130,43 @@ int ler_campo_arquivo(const char *nome_arquivo, char *campo) {
 	fscanf(arquivo, campo, &dado);
 	fclose(arquivo);
 	return dado;
+}
+
+int deletar_com_referencia(const char *nome_arquivo, char *referencia) {
+  FILE *arquivo = abrir_arquivo(nome_arquivo, "r");
+  FILE *arquivo_temp = abrir_arquivo("temp.txt", "w");
+
+  char linha[1000];
+  int referencia_encontrada = 0;
+  int faz_parte_da_conta = 0;
+  while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+    printf("%d", strlen(linha));
+    if (strlen(linha) > 1 && (strncmp(linha, referencia, strlen(referencia)) == 0 || faz_parte_da_conta == 1)) {
+      referencia_encontrada = 1;
+      faz_parte_da_conta = 1;
+    } else if (strlen(linha) == 1) {
+      faz_parte_da_conta=0;
+    } else {
+      fprintf(arquivo_temp, "%s", linha); 
+    }
+  }
+
+  fclose(arquivo);
+  fclose(arquivo_temp);
+
+  if (referencia_encontrada) {
+    if (remove(nome_arquivo) != 0) {
+      perror("Erro ao remover o arquivo original");
+      return 1;
+    }
+    if (rename("temp.txt", nome_arquivo) != 0) {
+      perror("Erro ao renomear o arquivo temporário");
+      return 1;
+    }
+  } else {
+    remove("temp.txt");
+    return 1;
+  }
+
+  return 0;  
 }

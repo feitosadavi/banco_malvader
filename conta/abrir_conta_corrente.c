@@ -3,39 +3,58 @@
 #include "../menus/menus.h"
 
 void abrir_conta_corrente(char *mensagem) {
-  // system("clear");
   printf("%s\n", mensagem);
-  int opcao = 16;
-  char *agencia_token="", *n_conta_token="";
-  char *val_agencia = "", *val_n_conta = "";
+
+  int opcao = 0;
+  char *tokens[14] = { NULL };
+  char *valores[14] = { "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+  char *comandos[14] = {
+    "Insira o número da agência: ",
+    "Insira o número da conta: ",
+    "Insira o nome do cliente: ",
+    "Insira o CPF do cliente: ",
+    "Insira a data de nascimento: ",
+    "Insira o telefone de contato: ",
+    "Insira o endereço do cliente: ",
+    "Insira o CEP: ",
+    "Insira o local: ",
+    "Insira o número da casa: ",
+    "Insira o bairro: ",
+    "Insira a cidade: ",
+    "Insira o estado: ",
+    "Insira a senha do cliente: "
+  };
+  char *chaves[14] = {
+    "agencia", "n_conta", "nome_cliente", "cpf_cliente", "data_nascimento",
+    "telefone_contato", "endereco_cliente", "cep", "local", "n_casa",
+    "bairro", "cidade", "estado", "senha_cliente"
+  };
+
   do {
-    system("clear");
-    printf("\n 1 - Agência [%s] \n 2 - Nº da conta [%s] \n 16 - Finalizar\n", val_agencia, val_n_conta);
+    system("cls");
+    printf("\n1 - Agência [%s] \n2 - Nº da conta [%s] \n3 - Nome do cliente [%s] \n4 - CPF do cliente [%s] \n5 - Data de nascimento [%s] \n6 - Telefone de contato [%s] \n7 - Endereço do cliente [%s] \n8 - CEP [%s] \n9 - Local [%s] \n10 - Nº da casa [%s] \n11 - Bairro [%s] \n12 - Cidade [%s] \n13 - Estado [%s] \n14 - Senha do cliente [%s] \n16 - Finalizar\n",
+    valores[0], valores[1], valores[2], valores[3], valores[4], valores[5], valores[6], valores[7], valores[8], valores[9], valores[10], valores[11], valores[12], valores[13]);
     printf("Insira a opção desejada: ");
 
     char opcao_str[10];
     if (fgets(opcao_str, sizeof(opcao_str), stdin) != NULL) {
       opcao = atoi(opcao_str);
     }
-    switch (opcao) {
-      case 1:
-        ler_dado_e_gerar_token("Insira o número da agência: ", "agencia", &agencia_token);
-        extrair_valor_do_token(agencia_token, &val_agencia);
-        break;
-      case 2:
-        ler_dado_e_gerar_token("Insira o número da conta: ", "n_conta", &n_conta_token);
-        extrair_valor_do_token(n_conta_token, &val_n_conta);
-        break;
-      case 16:
-        goto Cleanup;
-        Cleanup: ;
-        char *tokens[] = { agencia_token };
-        gravar_com_referencia("arquivos.txt", n_conta_token, tokens, 1);
-        abrir_menu_funcionario("Conta gravada com sucesso! \n");
-        break;
-      default:
-        printf("Opção inválida!\n");
-        break;
+
+    if (opcao >= 1 && opcao <= 14) {
+      ler_dado_e_gerar_token(comandos[opcao - 1], chaves[opcao - 1], &tokens[opcao - 1]);
+      extrair_valor_do_token(tokens[opcao - 1], &valores[opcao - 1]);
+    } else if (opcao != 16) {
+      printf("Opção inválida!\n");
     }
   } while (opcao != 16);
+
+  Cleanup:
+  // Verificar se o número da conta foi fornecido
+  if (tokens[1] != NULL) {
+    gravar_com_referencia("arquivos.txt", tokens[1], tokens, 14);
+    abrir_menu_funcionario("Conta gravada com sucesso! \n");
+  } else {
+    printf("Número da conta é obrigatório para finalizar o cadastro.\n");
+  }
 }

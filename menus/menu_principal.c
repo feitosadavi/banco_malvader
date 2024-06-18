@@ -5,7 +5,7 @@
 
 void abrir_menu_principal(char *mensagem)
 {
-  system("clear");
+  system("cls");
   printf("%s", mensagem);
 
   int opcao;

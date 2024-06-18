@@ -4,7 +4,7 @@
 
 void consultar_extrato()
 {
-  system("clear");
+  system("cls");
   printf("Consultar extrato: não implementado");
   abrir_menu_cliente();
 }
