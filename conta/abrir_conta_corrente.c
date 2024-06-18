@@ -9,7 +9,7 @@ void abrir_conta_corrente(char *mensagem) {
   char *tokens[14] = { NULL };
   char *valores[14] = { "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
   char *comandos[14] = {
-    "Insira o numero da agência: ",
+    "Insira o numero da agencia: ",
     "Insira o numero da conta: ",
     "Insira o nome do cliente: ",
     "Insira o CPF do cliente: ",
@@ -32,7 +32,7 @@ void abrir_conta_corrente(char *mensagem) {
 
   do {
     system("cls");
-    printf("\n1 - Agência [%s] \n2 - Nº da conta [%s] \n3 - Nome do cliente [%s] \n4 - CPF do cliente [%s] \n5 - Data de nascimento [%s] \n6 - Telefone de contato [%s] \n7 - Endereço do cliente [%s] \n8 - CEP [%s] \n9 - Local [%s] \n10 - Nº da casa [%s] \n11 - Bairro [%s] \n12 - Cidade [%s] \n13 - Estado [%s] \n14 - Senha do cliente [%s] \n16 - Finalizar\n",
+    printf("\n1 - Agencia [%s] \n2 - Numero da conta [%s] \n3 - Nome do cliente [%s] \n4 - CPF do cliente [%s] \n5 - Data de nascimento [%s] \n6 - Telefone de contato [%s] \n7 - Endereco do cliente [%s] \n8 - CEP [%s] \n9 - Local [%s] \n10 - Numero da casa [%s] \n11 - Bairro [%s] \n12 - Cidade [%s] \n13 - Estado [%s] \n14 - Senha do cliente [%s] \n16 - Finalizar\n",
     valores[0], valores[1], valores[2], valores[3], valores[4], valores[5], valores[6], valores[7], valores[8], valores[9], valores[10], valores[11], valores[12], valores[13]);
     printf("Insira a opção desejada: ");
 
