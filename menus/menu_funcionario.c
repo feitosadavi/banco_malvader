@@ -11,8 +11,8 @@ void abrir_menu_funcionario(char *mensagem)
   printf("%s", mensagem);
 
   int opcao;
-  printf("\n -=-=-=-= Menu Funcionário -=-=-=-= \n \n");
-  printf("1 - Abertura de Conta \n2 - Encerramento de Conta \n3 - Consultar Dados \n4 - Alterar Dados \n5 - Cadastro de Funcionários \n6 - Gerar Relatórios \n7 - Sair \n");
+  printf("\n -=-=-=-= Menu Funcionario -=-=-=-= \n \n");
+  printf("1 - Abertura de Conta \n2 - Encerramento de Conta \n3 - Consultar Dados \n4 - Alterar Dados \n5 - Cadastro de Funcionarios \n6 - Gerar Relatorios \n7 - Sair \n");
   scanf("%d", &opcao);
   switch (opcao) {
     case 1:
